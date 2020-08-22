@@ -1,3 +1,4 @@
+import 'package:buy_winer_app/common/constant.dart';
 import 'package:flutter/material.dart';
 // import 'package:fluro/fluro.dart';
 // import 'package:buy_winer_app/router/application.dart';
@@ -14,8 +15,10 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
       title: '购酒网',
+      theme: ThemeData(primaryColor: Constant.primaryColor),
       // onGenerateRoute: Application.router.generator,
       home: Index(),
     );

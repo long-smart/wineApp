@@ -1,5 +1,6 @@
 import 'package:buy_winer_app/common/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 class BannerWidget extends StatelessWidget {
@@ -14,11 +15,11 @@ class BannerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: Constant.bannerWidth,
+      height: ScreenUtil().setHeight(Constant.bannerWidth),
       child: Theme(
         data: Theme.of(context).copyWith(primaryColor: Colors.pinkAccent),
         child: Swiper(
-          autoplay: false,
+          autoplay: true,
           itemCount: imgUrls.length,
           itemBuilder: (BuildContext context, int index) {
             return Image.network(

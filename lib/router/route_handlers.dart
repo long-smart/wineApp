@@ -1,6 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:buy_winer_app/pages/home/home.dart';
+import 'package:buy_winer_app/pages/home/Home.dart';
 import 'package:buy_winer_app/pages/category/category.dart';
 import 'package:buy_winer_app/pages/cart/cart.dart';
 import 'package:buy_winer_app/pages/my/my.dart';

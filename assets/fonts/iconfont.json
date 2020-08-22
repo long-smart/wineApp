@@ -1,0 +1,44 @@
+{
+  "id": "2021743",
+  "name": "wine",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "购酒网",
+  "glyphs": [
+    {
+      "icon_id": "148060",
+      "name": "扫一扫",
+      "font_class": "saoyisao",
+      "unicode": "e6ea",
+      "unicode_decimal": 59114
+    },
+    {
+      "icon_id": "2451804",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "7550242",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "e691",
+      "unicode_decimal": 59025
+    },
+    {
+      "icon_id": "10026290",
+      "name": "购物车",
+      "font_class": "gouwuchezhengpin",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "14348127",
+      "name": "消 息 (1)",
+      "font_class": "xiaoxi1",
+      "unicode": "e695",
+      "unicode_decimal": 59029
+    }
+  ]
+}

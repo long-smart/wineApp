@@ -1,7 +1,11 @@
 import 'package:buy_winer_app/common/constant.dart';
 import 'package:flutter/material.dart';
-import 'searchBar.dart';
-import 'banner.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'SearchBar.dart';
+import 'Banner.dart';
+import 'Category.dart';
+import 'TextSlider.dart';
+import 'Timed.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -20,10 +24,11 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
+    // 监听页面滚动, 让头部 appBar变化颜色
     scrollController.addListener(() {
-      if (scrollController.offset <= Constant.bannerWidth) {
+      if (scrollController.offset >= ScreenUtil().setHeight(Constant.bannerWidth)) {
         setState(() {
-          color = Colors.redAccent;
+          color = Constant.primaryColor;
         });
       } else {
         setState(() {
@@ -37,9 +42,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Stack(
-        children: <Widget>[body(), SearchBar()],
-      )),
+        child: Stack(
+          // 将页面主体内容放在 搜索框上面, 设置搜索框背景透明
+          children: <Widget>[
+            body(),
+            SearchBar(color: color),
+          ],
+        ),
+      ),
     );
   }
 
@@ -47,9 +57,14 @@ class _HomePageState extends State<HomePage> {
     List<Widget> list = List(100).map((val) {
       return Text("123");
     }).toList();
+
     return ListView(
+      controller: scrollController,
       children: <Widget>[
-        BannerWidget(),
+        BannerWidget(), // banner轮播图
+        TextSliderWidget(), // 头条
+        HomeCategoryWidget(), // 分类
+        TimedWidget(), // 掌上秒拍
       ]..addAll(list),
     );
   }
